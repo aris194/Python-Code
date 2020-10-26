@@ -1,3 +1,4 @@
+```
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits import mplot3d
@@ -20,3 +21,4 @@ Z = (1/(2*np.sqrt(np.pi*D*T)))*R
 surf = ax.plot_surface(X, T, Z)
 plt.tight_layout()
 plt.show()
+```
