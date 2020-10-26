@@ -1,0 +1,22 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits import mplot3d
+
+fig = plt.figure(figsize=(7,4), dpi=100)
+ax = plt.axes(projection='3d')
+
+# Data
+
+mu=0.05*(-1);D = 0.5;
+X = np.arange(-1,1,0.02)
+T = np.arange(0.1,1,.025)
+X,T = np.meshgrid(X, T)
+denominator = 4*D*T
+numerator = X**2
+R = np.exp((-1)*numerator/denominator)
+Z = (1/(2*np.sqrt(np.pi*D*T)))*R
+
+# Plot
+surf = ax.plot_surface(X, T, Z)
+plt.tight_layout()
+plt.show()
